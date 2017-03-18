@@ -13,8 +13,9 @@ class MainVC: UIViewController {
     let buttonSize: CGFloat = 60.0
     let profileSize: CGFloat = 100.0
     
-    let mainSpace: CGFloat = 100
-    let ySpace: CGFloat = 40
+    let mainSpace: CGFloat = 115
+    let ySpace: CGFloat = 70
+    let xSpace: CGFloat = 85
     
     var  normalStateConstraints: [NSLayoutConstraint] = [NSLayoutConstraint]()
     var activeStateconstraints: [NSLayoutConstraint] = [NSLayoutConstraint]()
@@ -99,12 +100,12 @@ class MainVC: UIViewController {
         
         let zoomInHeightactive = zoomInbutton.heightAnchor.constraint(equalToConstant: buttonSize)
         let zoomInWidthactive = zoomInbutton.widthAnchor.constraint(equalToConstant: buttonSize)
-        let zoomInCenterXactive = zoomInbutton.centerXAnchor.constraint(equalTo: mainButton.centerXAnchor, constant: -mainSpace)
+        let zoomInCenterXactive = zoomInbutton.centerXAnchor.constraint(equalTo: mainButton.centerXAnchor, constant: -xSpace)
         let zoomInCenterYactive = zoomInbutton.centerYAnchor.constraint(equalTo: mainButton.centerYAnchor, constant: -ySpace)
         
         let zoomOutHeightactive = zoomOutbutton.heightAnchor.constraint(equalToConstant: buttonSize)
         let zoomOutWidthactive = zoomOutbutton.widthAnchor.constraint(equalToConstant: buttonSize)
-        let zoomOutCenterXactive = zoomOutbutton.centerXAnchor.constraint(equalTo: mainButton.centerXAnchor, constant: mainSpace)
+        let zoomOutCenterXactive = zoomOutbutton.centerXAnchor.constraint(equalTo: mainButton.centerXAnchor, constant: xSpace)
         let zoomOutCenterYactive = zoomOutbutton.centerYAnchor.constraint(equalTo: mainButton.centerYAnchor, constant: -ySpace)
         
         activeStateconstraints.append(contentsOf: [zoomOutHeightactive, zoomOutWidthactive, zoomOutCenterXactive, zoomOutCenterYactive, zoomInHeightactive, zoomInWidthactive, zoomInCenterXactive, zoomInCenterYactive, glassesHeightactive, glassesWidthactive, glassesXactive, glasseYactive])
